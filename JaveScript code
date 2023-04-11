@@ -1,0 +1,16 @@
+function maximizePoints(team1, team2) {
+  let score = 0;
+  let teamTwo = team2.sort(function(a, b){return a - b});
+  let myTeam = team1.sort(function(a, b){return a - b})
+  
+  while (myTeam.length > 0) {
+    if (myTeam[0] > teamTwo[0]) {
+      score++;
+      myTeam.shift();
+      teamTwo.shift();
+    } else {
+    myTeam.shift();
+}
+  }
+    return score;
+  }
